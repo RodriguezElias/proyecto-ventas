@@ -1,0 +1,18 @@
+
+
+- Usuario
+- Clientes
+- Producto
+    - nombre
+    - categoria_id
+- Categoria
+    - nombre
+- Stock
+    - product_id y cantidad
+- Orden
+    - client_id
+    - fecha
+- OrdenItem
+    - orden_id
+    - cantidad
+    - producto_id
