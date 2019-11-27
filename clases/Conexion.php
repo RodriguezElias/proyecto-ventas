@@ -9,11 +9,11 @@ class conectar{
 
     public function conexion(){
         $conexion=mysqli_connect($this->servidor,
-                                 $this->usuario,
-                                 $this->password,
-                                 $this->bd);
+           $this->usuario,
+           $this->password,
+           $this->bd);
 
-            return $conexion;
+        return $conexion;
 
 
     }
