@@ -27,10 +27,10 @@
 							<label>Usuario</label>
 							<input type="text" class="form-control input-sm" name="usuario" id="usuario">
 							<label>Password</label>
-							<input type="password" class="form-control input-sm" name="password" id="password">
+							<input type="text" class="form-control input-sm" name="password" id="password">
 							<p></p>
 							<span class="btn btn-primary" id="registro">Registrar</span>
-							<a href="index.php" class="btn btn-danger">Volver</a>
+							<a href="index.php" class="btn btn-danger">Regresar login</a>
 						</form>
 					</div>
 				</div>
