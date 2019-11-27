@@ -7,6 +7,8 @@
     <title>Login de Usuario</title>
     <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
     <script src="librerias/jquery-3.2.1.min.js"></script>
+    <script src="js/funciones.js"></script>
+
 
 </head>
 <body style="background-color: gray">
@@ -28,7 +30,7 @@
     <label>Password</label>
         <input type="password" class="form-control input-sm" name="password" id="password">
     <p></p>
-    <span class="btn btn-primary ">Entrar</span>
+    <span class="btn btn-primary" id="entrarSistema">Entrar</span>
     <a href="registro.php" class="btn btn-danger">Registrar</a>
 </form>
 
@@ -41,3 +43,29 @@
     
 </body>
 </html>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#entrarSistema').click(function(){
+		vacios=validarFormVacio('frmLogin');
+			if(vacios > 0){
+				alert("Debes llenar todos los campos!!");
+				return false;
+			}
+		datos=$('#frmLogin').serialize();
+		$.ajax({
+			type:"POST",
+			data:datos,
+			url:"procesos/regLogin/login.php",
+			success:function(r){
+				if(r==1){
+					window.location="vistas/inicio.php";
+				}else{
+					alert("No se pudo acceder :(");
+				}
+			}
+		});
+	});
+	});
+</script>
