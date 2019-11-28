@@ -24,7 +24,7 @@ if(isset($_SESSION['usuario'])){
 
 				<div class="col-sm-4">
 					<form id="frmArticulos" id="multipart/form-data" > <!--necesario para enviar archivos-->
-					<label>Categorias</label>
+					<label>Categoria</label>
 					<select class="form-control input-sm" id="categoriaSelect" name="categoriaSelect">
 <!--  Cuando invoca "A" quiere decir que el select está vacío (funciones.js) -->
 						<option value="A">Selecciona una categoria </option>
@@ -45,7 +45,7 @@ if(isset($_SESSION['usuario'])){
 
 				</div>
 				<div class="col-sm-8">
-					<div id="tablaArticulos"></div>
+					<div id="tablaArticulosLoad"></div>
 			
 				</div>
 
