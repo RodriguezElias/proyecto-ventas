@@ -54,6 +54,7 @@ if(isset($_SESSION['usuario'])){
 						if(r==1){
 					//esta linea nos permite limpiar el formulario al insetar un registro
 					$('#frmCategorias')[0].reset();
+					
 					$('#tablaCategoriaLoad').load("categorias/tablaCategorias.php");
 					alertify.success("Categoria agregada con exito :D");
 				}else{
