@@ -27,6 +27,7 @@ if(mysqli_num_rows($result)>0){
 </head>
 <body style="background-color: gray">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <br><br><br>
 <div class="container">
 		<div class="row">
@@ -55,6 +56,8 @@ if(mysqli_num_rows($result)>0){
 		</div>
 	</div>
 =======
+=======
+>>>>>>> 3a379e7... eliminado duplicado
     <br><br><br>
     <div class="container">
       <div class="row">
@@ -82,7 +85,11 @@ if(mysqli_num_rows($result)>0){
      <div class="col-sm-4"></div>
  </div>
 </div>
+<<<<<<< HEAD
 >>>>>>> ae0567d... completado video 10
+=======
+
+>>>>>>> 3a379e7... eliminado duplicado
 </body>
 </html>
 
