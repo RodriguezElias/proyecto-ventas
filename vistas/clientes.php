@@ -65,7 +65,7 @@ if(isset($_SESSION['usuario'])){
 					//esta linea nos permite limpiar el formulario al insetar un registro
 					$('#frmClientes')[0].reset();
 					$('#tablaClientesLoad').load("clientes/tablaClientes.php");
-					alertify.success("Agregado con exito :D");
+					alertify.success("Agregado con exito");
 				}else{
 					alertify.error("No se pudo agregar");
 				}
