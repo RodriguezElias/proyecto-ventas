@@ -43,7 +43,7 @@
 					?>
 
 					<li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span> Administrar usuarios</a>
-
+					</li>
 					<?php 
 						endif;
 						?>
