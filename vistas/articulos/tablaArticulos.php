@@ -16,7 +16,6 @@
 		  inner join categorias as cat
 		  on art.id_categoria=cat.id_categoria";
 	$result=mysqli_query($conexion,$sql);
-
  ?>
 
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">

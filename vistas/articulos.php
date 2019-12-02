@@ -1,7 +1,6 @@
 <?php 
 session_start();
 if(isset($_SESSION['usuario'])){
-
 	?>
 
 
@@ -113,11 +112,9 @@ if(isset($_SESSION['usuario'])){
 					$('#descripcionU').val(dato['descripcion']);
 					$('#cantidadU').val(dato['cantidad']);
 					$('#precioU').val(dato['precio']);
-
 				}
 			});
 		}
-
 		function eliminaArticulo(idArticulo){
 			alertify.confirm('¿Desea eliminar este articulo?', function(){ 
 				$.ajax({
@@ -142,7 +139,6 @@ if(isset($_SESSION['usuario'])){
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#btnActualizaarticulo').click(function(){
-
 				datos=$('#frmArticulosU').serialize();
 				$.ajax({
 					type:"POST",
@@ -151,9 +147,9 @@ if(isset($_SESSION['usuario'])){
 					success:function(r){
 						if(r==1){
 							$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
-							alertify.success("Actualizado con exito");
+							alertify.success("Actualizado con exito :D");
 						}else{
-							alertify.error("Error al actualizar");
+							alertify.error("Error al actualizar :(");
 						}
 					}
 				});
@@ -164,18 +160,13 @@ if(isset($_SESSION['usuario'])){
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#tablaArticulosLoad').load("articulos/tablaArticulos.php");
-
 			$('#btnAgregaArticulo').click(function(){
-
 				vacios=validarFormVacio('frmArticulos');
-
 				if(vacios > 0){
 					alertify.alert("Debes llenar todos los campos!!");
 					return false;
 				}
-
 				var formData = new FormData(document.getElementById("frmArticulos"));
-
 				$.ajax({
 					url: "../procesos/articulos/insertaArticulos.php",
 					type: "post",
@@ -184,7 +175,6 @@ if(isset($_SESSION['usuario'])){
 					cache: false,
 					contentType: false,
 					processData: false,
-
 					success:function(r){
 						
 						if(r == 1){
