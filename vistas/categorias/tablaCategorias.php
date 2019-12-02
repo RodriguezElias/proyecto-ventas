@@ -1,23 +1,21 @@
-<?php 
-require_once "../../clases/Conexion.php";
-$c = new conectar();
-$conexion = $c->conexion();
+	<?php 
+			require_once "../../clases/Conexion.php";
+			$c= new conectar();
+			$conexion=$c->conexion();
+			$sql="SELECT id_categoria,nombreCategoria 
+					FROM categorias";
+			$result=mysqli_query($conexion,$sql);
+	 ?>
 
-$sql = "SELECT id_categoria, nombreCategoria FROM categorias;";
-
-$result = mysqli_query($conexion, $sql);
-
-
-
-
-?>
 
 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
+	<caption><label>Categorias :D</label></caption>
 	<tr>
 		<td>Categoria</td>
 		<td>Editar</td>
 		<td>Eliminar</td>
 	</tr>
+
 	<?php
 	while ($ver=mysqli_fetch_row($result)):
 	 ?>
