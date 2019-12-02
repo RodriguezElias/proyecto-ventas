@@ -48,9 +48,26 @@ class ventas{
 									'$d[3]',
 									'$fecha')";
 			$r=$r + $result=mysqli_query($conexion,$sql);
+			self::descuentaCantidad($d[0],1);
 		}
 		return $r;
 	}
+	
+	public function descuentaCantidad($idproducto,$cantidad){
+		$c= new conectar();
+		$conexion=$c->conexion();
+		$sql="SELECT cantidad
+			  from articulos
+			  where id_producto='$idproducto'";
+		$result=mysqli_query($conexion,$sql);
+		$cantidad1=mysqli_fetch_row($result)[0];
+		$cantidadNueva=abs($cantidad - $cantidad1);
+		$sql="UPDATE articulos set cantidad='$cantidadNueva'
+			where id_producto='$idproducto'";
+			mysqli_query($conexion,$sql);
+	}
+	
+	
 	public function creaFolio(){
 		$c= new conectar();
 		$conexion=$c->conexion();

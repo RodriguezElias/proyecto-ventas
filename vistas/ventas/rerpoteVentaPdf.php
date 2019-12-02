@@ -29,7 +29,7 @@ $result=mysqli_query($conexion,$sql);
  	<link rel="stylesheet" type="text/css" href="../../librerias/bootstrap/css/bootstrap.css">
  </head>
  <body>
- 		<img src="../../img/ventas.jpg" width="200" height="200">
+ 		<img src="../../img/icono-1.png" width="200" height="200"> <h1 class="display-3">Tecno Hardware</h1>
  		<br>
  		<table class="table">
  			<tr>
@@ -46,10 +46,10 @@ $result=mysqli_query($conexion,$sql);
 
  		<table class="table">
  			<tr>
- 				<td>nombre producto</td>
- 				<td>Precio</td>
- 				<td>Cantidad</td>
- 				<td>Descripcion</td>
+ 				<th scope="col">Nombre Producto</th>
+ 				<th scope="col">Precio</th>
+ 				<th scope="col">Cantidad</th>
+ 				<th scope="col">Descripcion</th>
  			</tr>
 
  			<?php 

@@ -47,7 +47,7 @@ $result=mysqli_query($conexion,$sql);
  			Folio: <?php echo $folio ?>
  		</p>
  		<p>
- 			cliente: <?php echo $objv->nombreCliente($idcliente); ?>
+ 			Cliente: <?php echo $objv->nombreCliente($idcliente); ?>
  		</p>
  		
  		<table style="border-collapse: collapse;" border="1">

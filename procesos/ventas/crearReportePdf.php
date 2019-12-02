@@ -23,7 +23,7 @@ $pdf->set_paper("letter", "portrait");
 //$pdf->set_paper(array(0,0,104,250));
  
 // Cargamos el contenido HTML.
-$pdf->load_html(ob_get_clean());
+$pdf->load_html(utf8_decode($html));
  
 // Renderizamos el documento PDF.
 $pdf->render();
