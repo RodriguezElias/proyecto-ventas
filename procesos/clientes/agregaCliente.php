@@ -8,8 +8,7 @@ session_start();
 			$_POST['apellidos'],
 			$_POST['direccion'],
 			$_POST['email'],
-			$_POST['telefono'],
-			$_POST['rfc']
+			$_POST['telefono']
 				);
 	echo $obj->agregaCliente($datos);
 	

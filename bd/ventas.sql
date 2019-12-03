@@ -50,7 +50,6 @@ create table clientes(
 				direccion varchar(200),
 				email varchar(200),
 				telefono varchar(200),
-				rfc varchar(200),
 				primary key(id_cliente)
 					);
 

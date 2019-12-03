@@ -9,15 +9,13 @@
 										apellido,
 										direccion,
 										email,
-										telefono,
-										rfc)
+										telefono)
 							values ('$idusuario',
 									'$datos[0]',
 									'$datos[1]',
 									'$datos[2]',
 									'$datos[3]',
-									'$datos[4]',
-									'$datos[5]')";
+									'$datos[4]')";
 			return mysqli_query($conexion,$sql);	
 		}
 		public function obtenDatosCliente($idcliente){
@@ -28,8 +26,7 @@
 							apellido,
 							direccion,
 							email,
-							telefono,
-							rfc 
+							telefono
 				from clientes";
 			$result=mysqli_query($conexion,$sql);
 			$ver=mysqli_fetch_row($result);
@@ -39,8 +36,7 @@
 					'apellido' => $ver[2],
 					'direccion' => $ver[3],
 					'email' => $ver[4],
-					'telefono' => $ver[5],
-					'rfc' => $ver[6]
+					'telefono' => $ver[5]
 						);
 			return $datos;
 		}
@@ -51,8 +47,8 @@
 										apellido='$datos[2]',
 										direccion='$datos[3]',
 										email='$datos[4]',
-										telefono='$datos[5]',
-										rfc='$datos[6]' 
+										telefono='$datos[5]'
+										 
 								where id_cliente='$datos[0]'";
 			return mysqli_query($conexion,$sql);
 		}

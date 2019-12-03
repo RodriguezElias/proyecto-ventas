@@ -9,8 +9,7 @@ session_start();
 			$_POST['apellidosU'],
 			$_POST['direccionU'],
 			$_POST['emailU'],
-			$_POST['telefonoU'],
-			$_POST['rfcU']
+			$_POST['telefonoU']
 				);
 	echo $obj->actualizaCliente($datos);
 	
